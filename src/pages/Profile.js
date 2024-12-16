@@ -17,6 +17,7 @@ const Profile = () => {
   const fetchUserDetails = async () => {
     if (!email) {
       setError("Please enter a valid email address.");
+
       return;
     }
 
@@ -29,7 +30,7 @@ const Profile = () => {
       const gravatarUrl = `https://www.gravatar.com/avatar/${emailHash}?d=identicon`;
       setGravatarUrl(gravatarUrl);
 
-      // Fetch GitHub repos (requires a public API call)
+      // Fetch GitHub repos
       const githubApiUrl = `https://api.github.com/search/users?q=${encodeURIComponent(
         email
       )}`;
@@ -43,6 +44,7 @@ const Profile = () => {
       } else {
         setGithubRepos([]);
       }
+      setEmail("");
     } catch (err) {
       setError(
         "Failed to fetch data. Please check the email address or try again later."
