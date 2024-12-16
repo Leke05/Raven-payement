@@ -1,0 +1,31 @@
+.auth-screen {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.input-container {
+  margin-bottom: 20px;
+
+  label {
+    color: #fff;
+    justify-content: flex-start;
+  }
+
+  input {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 1.4rem;
+  }
+}
+
+.gravatar-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.error {
+  color: red;
+}
