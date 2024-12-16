@@ -18,6 +18,11 @@
     padding: 1.2rem;
     border-radius: 1.4rem;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    padding: 1rem;
+  }
 }
 
 .gravatar-container img {

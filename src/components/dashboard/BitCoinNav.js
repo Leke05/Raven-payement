@@ -4,7 +4,6 @@ import { IoBarChartOutline } from "react-icons/io5";
 import styled from "styled-components";
 
 const BitCoinNav = ({ chartData }) => {
-  console.log(chartData?.Data);
   return (
     <NavContainer>
       <LogoContainer>
@@ -96,19 +95,19 @@ const DetailItem = styled.div`
 const PriceContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.2rem;
   padding-top: 1.3rem;
 `;
 
 const Price = styled.span`
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   color: #4caf50;
 `;
 
 const Label = styled.span`
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #bbb;
 `;
 
@@ -117,4 +116,8 @@ const ChangeText = styled.span`
   font-size: 14px;
   font-weight: bold;
   color: ${(props) => (props.positive ? "#4caf50" : "##a3a4a7")};
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.5rem;
+  }
 `;
